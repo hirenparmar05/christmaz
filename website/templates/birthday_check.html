@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="christmas-container">
+    <div class="snowman-left.png"></div>
+    <div class="snowman-right.png"></div>
+    
+    <div class="birthday-card">
+        <div class="snow-overlay"></div>
+        <h1>🎂 One More Christmas Secret! 🎂</h1>
+        
+        {% if error %}
+        <div class="error-message">
+            <p>Wow, no gifts for you.</p>
+        </div>
+        {% endif %}
+        
+        <div class="birthday-content">
+            <form method="POST" class="birthday-form">
+                <div class="form-group">
+                    <label for="birthday">When is my birthday? (YYYY-MM-DD)</label>
+                    <input type="date" id="birthday" name="birthday" required>
+                </div>
+                <button type="submit" class="christmas-button">Check Birthday</button>
+            </form>
+            
+            <div class="birthday-decoration">
+                <div class="snowflake-cluster"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

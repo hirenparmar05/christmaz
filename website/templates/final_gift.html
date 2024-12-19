@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="christmas-container">
+    <div class="snowmen-decoration left"></div>
+    <div class="snowmen-decoration right"></div>
+    
+    <div class="reveal-card">
+        <div class="snow-overlay"></div>
+        <h1>🎉 Your Gift Has Been Revealed! 🎉</h1>
+        
+        <div class="revealed-gift">
+            <div class="gift-animation">
+                <div class="large-gift-box opening">
+                    <div class="gift-lid"></div>
+                    <div class="gift-box-body"></div>
+                    <div class="gift-ribbon"></div>
+                </div>
+            </div>
+            
+            <div class="gift-message">
+                <h2>You received:</h2>
+                <p class="gift-reveal-text">{{ gift }}</p>
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <a href="{{ url_for('index') }}" class="christmas-button">Start Over</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

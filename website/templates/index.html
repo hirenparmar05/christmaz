@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="christmas-container">
+    <div class="snowmen-decoration left"></div>
+    <div class="snowmen-decoration right"></div>
+    
+    <div class="welcome-card">
+        <div class="snow-overlay"></div>
+        <h1>🎄 Welcome to the Christmas Gift Surprise! 🎄</h1>
+        <div class="welcome-content">
+            <div class="christmas-tree-decoration"></div>
+            <form method="POST" class="welcome-form">
+                <div class="form-group">
+                    <label for="name">Please enter your name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <button type="submit" class="christmas-button">Enter the Christmas Wonder</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="christmas-container">
+    <div class="snowmen-decoration left"></div>
+    <div class="snowmen-decoration right"></div>
+    
+    <div class="gift-selection-card">
+        <h1>🎁 Choose Your Mystery Gift! 🎁</h1>
+        <p class="festive-text">Click on any gift to reveal your surprise!</p>
+        
+        <div class="mystery-gifts-container">
+            {% for i in range(1, 5) %}
+            <div class="mystery-gift" onclick="window.location.href='{{ url_for('reveal_gift', gift_number=i) }}'">
+                <div class="gift-box">
+                    <div class="gift-lid"></div>
+                    <div class="gift-box-body">
+                        <span class="gift-number">{{ i }}</span>
+                    </div>
+                    <div class="gift-ribbon"></div>
+                    <div class="gift-sparkle"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

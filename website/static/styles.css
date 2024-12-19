@@ -1,0 +1,221 @@
+/* Adding to previous CSS */
+
+/* Common Card Styles */
+.welcome-card,
+.birthday-card,
+.merry-christmas-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Welcome Page Styles */
+.welcome-content {
+    position: relative;
+    z-index: 1;
+}
+
+.christmas-tree-decoration {
+    width: 100px;
+    height: 150px;
+    margin: 0 auto 30px;
+    background-image: url('christmas-tree.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.welcome-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Birthday Page Styles */
+.birthday-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.birthday-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.birthday-decoration {
+    flex: 1;
+    min-width: 300px;
+}
+
+.snowflake-cluster {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url('snowflakes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: rotate 20s linear infinite;
+}
+
+/* Christmas Scene Styles */
+.christmas-scene {
+    margin: 20px auto;
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.animated-tree {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    position: absolute;
+    left: 130px;  /* Centered within 300px container */
+    top: 200px;
+    color: #ffd700;
+    font-size: 40px;
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+.tree-top {
+    position: absolute;
+    left: 120px;  /* Centered within 300px container */
+    top: 80px;
+    color: #2d5a40;
+    font-size: 80px;
+}
+
+.tree-middle {
+    position: absolute;
+    left: 120px;  /* Centered within 300px container */
+    top: 140px;
+    color: #2d5a40;
+    font-size: 80px;
+}
+
+.tree-bottom {
+    position: absolute;
+    left: 120px;  /* Centered within 300px container */
+    top: 200px;
+    color: #2d5a40;
+    font-size: 80px;
+}
+
+.trunk {
+    position: absolute;
+    left: 145px;  /* Centered within 300px container */
+    top: 280px;
+    color: #8b4513;
+    font-size: 40px;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.decorations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bauble,
+.light {
+    position: absolute;
+    animation: swing 3s ease-in-out infinite;
+}
+
+.bauble {
+    color: #c41e3a;
+    font-size: 20px;
+}
+
+.light {
+    color: #ffd700;
+    font-size: 15px;
+}
+
+/* Error Message Styles */
+.error-message {
+    background: rgba(255, 0, 0, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    color: #ff6b6b;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+/* Animations */
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1.1em;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .birthday-content {
+        flex-direction: column;
+    }
+    
+    .christmas-scene {
+        transform: scale(0.8);
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+}
